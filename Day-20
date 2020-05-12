@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void swap(int *x,int *y){
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+
+}
+
+
+
+int main() {
+    int count;
+    int n;
+    cin >> n;
+    int arr[1000];
+    for(int i= 0; i < n; i++){
+    	cin >> arr[i];
+    }
+    int s=sizeof(arr);
+     count=0;
+        for(int g=0;g<n;g++){
+    
+    for(int k = 0;k<n-1;k++){
+        
+        if(arr[k]>arr[k+1]){
+            swap(&arr[k],&arr[k+1]);
+            count++;
+        }
+
+    }
+    }
+    cout<<"Array is sorted in "<<count<<" swaps."<<endl;
+    cout<<"First Element: "<<arr[0]<<endl;
+    cout<<"Last Element: "<<arr[n-1];
+    // Write Your Code Here
+    return 0;
+}
+
+
+Thank You :)
