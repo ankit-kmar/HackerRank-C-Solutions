@@ -1,2 +1,2 @@
-# HackerRank-C-Solutions
-It consist of solutions of all 31 days of C++language
+# HackerRank-30-Days-Challenge
+It consist of solutions of all 31 days in C++language
