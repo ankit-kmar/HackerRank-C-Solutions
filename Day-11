@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+#include <climits>
+using namespace std;
+
+int main(){
+    vector<vector<int> > arr(6,vector<int>(6));
+    for(int i=0;i<6;i++)
+    {
+        for(int j=0;j<6;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    
+    int temp = arr[0][0]+arr[0][1]+arr[0][2]+arr[1][1]+arr[2][0]+arr[2][1]+arr[2][2];
+    int hg_sum = temp;
+
+    for(int i=0;i<4;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            temp=arr[i][j]+arr[i][j+1]+arr[i][j+2]+arr[i+1][j+1]+arr[i+2][j]+arr[i+2][j+1]+arr[i+2][j+2];  
+            if(temp>hg_sum)
+            {
+                hg_sum=temp;
+
+            }
+            else{
+                temp=0;
+            }
+        }
+    }
+    cout<<hg_sum;
+    return 0;
+
+}
+
+
+Thank You :)
