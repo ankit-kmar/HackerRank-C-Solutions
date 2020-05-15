@@ -25,7 +25,7 @@ MyBook(string title, string author, int price):Book(title,author){
 this->price=price;
 }
 
-public:
+public :
 void display(){
     cout<<"Title: "<< this->title<<endl;
     cout<<"Author: "<<this->author<<endl;
